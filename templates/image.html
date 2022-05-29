@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <script
+  src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+  data-auto-a11y="true"
+></script>
+<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-130795909-1');
+  </script>
+
+</head>
+<body>
+
+  <div class="loader_bg">
+    <div class="loader"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+<style>
+  
+  .loader_bg{top: 0px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999999;
+    background: #dff7f6;
+    width: 83%;
+    height: 100%;
+    left: 287px;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 3s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+
+*
+
+  
+</style>
+
+  <style>
+    .aside{
+     
+      width: 257px !important;
+    }
+    .menu-label{
+      padding-left: 40px !important;
+    }
+    body{
+
+      font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    .menu-list{ font-size: 15px;
+      padding-left: 23px !important;
+
+
+
+      
+    }
+  
+  
+  
+  
+  
+  </style>
+
+<div   id="app">
+  <nav style="    width: 6vw;"  id="navbar-main" class="navbar is-fixed-top">
+    <div  class="navbar-brand">
+      <a class="navbar-item mobile-aside-button">
+        <span style="    left: 10px;
+        
+        position: relative;" class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+      </a>
+      
+    </div>
+   
+  
+
+
+  
+
+<aside class="aside is-placed-left is-expanded">
+  <div class="aside-tools">
+   
+    <div  style="        border-radius: 10px;
+    padding-top: 18px;
+    float: left;
+    width: 58px;
+    height: 58px;
+    padding-left: 17px;
+    background-color: #f2f4fd;
+    left: 10px;
+ 
+    position: relative;
+"> <b style="font-size: 30px;" class="font-black">H</b></div><div style="       left:5px;
+  
+    float: right;
+    position: relative;">&nbsp;&nbsp; Health And Care</div>
+    
+  </div><div style="    max-height: 63vh;
+  
+">
+  <div  class="menu is-menu-main">
+
+    <ul class="menu-list">
+      <li class="active">
+        <a href="{{url_for('home')}}">
+          <span  style="    color: #001c6d !important;" class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">Dashboard</span> </a>
+        </li>
+          <li class="--set-active-tables-html">
+            <a href="/news">
+              <span  style="    color: #001c6d !important;" class="icon"><i class="mdi mdi-earth"></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">World Health News</span> </a>
+        </li><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><li class="--set-active-tables-html">
+            <a href="/logout">
+              <span  style="    color: #001c6d !important;" class="icon"><i class='fas fa-sign-out-alt'></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">Logout</span> </a>
+        </li>
+       
+    
+      
+     
+    </ul>
+    <svg class="jss357" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 1921" preserveAspectRatio="none"><path class="jss358" d="M-58.2987738,910.903394 C-213.665983,944.019728 -280.940056,954.15079 -436.833756,920.508102 C-591.293459,887.174877 -747.302467,887.174877 -884.636237,887.174877 L-884.636237,1035.36376 L1035.36376,1035.36376 L1035.36376,887.174877 C854.898993,868.678365 795.227803,958.52455 505.146363,922.849714 C215.064933,887.174877 97.0684352,877.78706 -58.2987738,910.903394 Z" transform="translate(75.363763, 960.000000) rotate(90.000000) translate(-75.363763, -960.000000)" fill="currentColor"></path></svg>
+
+   
+  </div></div>
+</aside>
+
+
+
+<style>
+
+
+
+.jss357 {
+    top: 0;
+    color: white;
+    right: -32px;
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+</style>
+   
+  </div></div>
+</aside>
+
+
+
+
+
+
+
+
+</nav></div>
+
+<section style="
+position: fixed;
+top: 0px;
+
+
+
+" class="is-title-bar"><div class="container1">
+  <h1 style="text-align: center;" class="jumb">Process your Image</h1>
+  <br><br>
+  <form class="form-horizontal" action="/sub" method="post" enctype="multipart/form-data">
+
+    <div style="width: 88%;
+    left: 29%;
+    position: relative;" class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Image"  name="image" id="pwd">
+      </div>
+    </div>
+
+    <div style="width: 88%;
+    left: 29%;
+    position: relative;" class="form-group">        
+      <div style="    margin-left: -20.666667%;
+    margin-top: 31px;" >
+       <input class="btn btn-2 btn-2g" type="submit" name="Submit" class='btn btn-default'>
+      </div>
+    </div>
+  </form>
+
+  {% if prediction == 0 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> dyed-lifted-polyps </i></h2>
+
+  {% endif %}
+
+  {% if prediction == 1 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have  : <i> dyed-resection-margins </i></h2>
+
+  {% endif %}
+
+  {% if prediction == 2 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> esophagitis </i></h2>
+
+  {% endif %}
+
+  {% if prediction == 3 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> normal-cecium </i></h2>
+
+  {% endif %}
+
+  {% if prediction == 4 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> normal-pylorus </i></h2>
+
+  {% endif %}
+
+  {% if prediction == 5 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> normal-z-line </i></h2>
+
+  {% endif %}
+
+
+  {% if prediction == 6 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> polyps </i></h2>
+
+  {% endif %}
+
+
+
+  {% if prediction == 7 %}
+  <img src="{{img_path}}" height="400px" width="400px">
+  <h2> You might have   : <i> ulcerative-colitis </i></h2>
+
+  {% endif %}
+
+</div>
+
+    </section>
+    
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '658339141622648');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=658339141622648&ev=PageView&noscript=1"/></noscript>
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+<script>
+  "use strict";Array.from(document.getElementsByClassName("dropdown")).forEach(function(e){e.addEventListener("click",function(e){var t;e.currentTarget.classList.contains("navbar-item")?e.currentTarget.classList.toggle("active"):(t=e.currentTarget.getElementsByClassName("mdi")[1],e.currentTarget.parentNode.classList.toggle("active"),t.classList.toggle("mdi-plus"),t.classList.toggle("mdi-minus"))})}),Array.from(document.getElementsByClassName("mobile-aside-button")).forEach(function(e){e.addEventListener("click",function(e){e=e.currentTarget.getElementsByClassName("icon")[0].getElementsByClassName("mdi")[0];document.documentElement.classList.toggle("aside-mobile-expanded"),e.classList.toggle("mdi-forwardburger"),e.classList.toggle("mdi-backburger")})}),Array.from(document.getElementsByClassName("--jb-navbar-menu-toggle")).forEach(function(e){e.addEventListener("click",function(e){var t=e.currentTarget.getElementsByClassName("icon")[0].getElementsByClassName("mdi")[0];document.getElementById(e.currentTarget.getAttribute("data-target")).classList.toggle("active"),t.classList.toggle("mdi-dots-vertical"),t.classList.toggle("mdi-close")})}),Array.from(document.getElementsByClassName("--jb-modal")).forEach(function(e){e.addEventListener("click",function(e){e=e.currentTarget.getAttribute("data-target");document.getElementById(e).classList.add("active"),document.documentElement.classList.add("clipped")})}),Array.from(document.getElementsByClassName("--jb-modal-close")).forEach(function(e){e.addEventListener("click",function(e){e.currentTarget.closest(".modal").classList.remove("active"),document.documentElement.classList.remove("is-clipped")})}),Array.from(document.getElementsByClassName("--jb-notification-dismiss")).forEach(function(e){e.addEventListener("click",function(e){e.currentTarget.closest(".notification").classList.add("hidden")})});</script>
+
+
+<script
+  src="http://www.datouwang.com/uploads/demo/jiaoben/201507/jiaoben544/js/jquery-2.1.1.min.js" >
+</script>
+
+
+<style>
+  img{
+        left: 32%;
+    position: relative;
+  }
+  .btn {
+        left: 28%;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 13px 34px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+  .btn-2 {
+  background: #415ba7;
+  color: #fff;
+  box-shadow: 0 6px #001c6d;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+  .btn-2g:hover {
+  box-shadow: 0 4px #ab3c3c;
+  top: 2px;
+  color: white !important;
+}
+
+.btn-2g:active {
+  box-shadow: 0 0 #ab3c3c;
+  top: 6px;
+} 
+  .container1{
+        overflow-y: scroll;
+    width: 90%;
+    position: relative;
+    height: 103%;
+    overflow-x: hidden;
+    
+  }
+  h2{
+
+    position: relative;
+    left: 27%;
+
+  }
+  .css-18a571y{
+        z-index: 10000;
+    cursor: pointer;
+
+  }
+  .col-sm-10{
+        width: 28.333333%;
+  }
+
+
+
+
+  @import url(http://fonts.useso.com/css?family=Source+Sans+Pro:200,300);
+  
+  
+  @-webkit-keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-700px) rotate(600deg);
+              transform: translateY(-700px) rotate(600deg);
+    }
+  }
+  @keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-700px) rotate(600deg);
+              transform: translateY(-700px) rotate(600deg);
+    }
+  }</style>
+
+</body>
+
+</html>

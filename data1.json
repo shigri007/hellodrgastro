@@ -1,0 +1,296 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Hello,Hope you are doing well.You can ask me from these as I have information about certain gestronological diseases like , Gerd, Indigestion, Vomiting, Ulcer, Abdominal Pain, Gas, Biliary Tract Disorders, Gallbladder Disorders, and Gallstone Pancreatitis, Gallstone Pancreatitis, Constipation, Diarrheal Diseases  Acute and Chronic, Irritable Bowel Syndrome, Anal fissures, Lactose intolerent, gallstones, liver disease and loss of appetite.I can also give you information about how to treat them ask me in format Diease-name then ask for treatment,causes etc"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye!"],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["what can you do?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered","I need to know something"],
+     "responses": ["I have information about certain gestronological diseases like , Gerd, Indigestion, Vomiting, Ulcer, Abdominal Pain, Gas, Biliary Tract Disorders, Gallbladder Disorders, and Gallstone Pancreatitis, Gallstone Pancreatitis, Constipation, Diarrheal Diseases  Acute and Chronic, Irritable Bowel Syndrome, Anal fissures, Lactose intolerent, gallstones, liver disease and loss of appetite", "I can also give you information about how to treat them but doctor reccomendation is important", "Also i can tell you somethings about its symptoms"],
+     "context": [""]
+    },
+    {"tag": "gerd description",
+     "patterns": ["Tell me about gerd disease", "about gerd", "What is gerd?", "What is gerd disease?", "gerd disease","gerd" ],
+     "responses": ["Gastroesophageal reflux disease (GERD) is a chronic medical condition caused by the flow of contents from the stomach upwards into the esophagus resulting in both symptoms and complications. The most common symptoms of GERD are heartburn and regurgitation. Heartburn is a burning sensation in the chest behind the breastbone. Regurgitation is a feeling of fluid or food coming up into the chest. Many people experience both symptoms; however, some patients can have one without the other."],
+     "context": ["Knowing_about_gerd_disease"]
+    },
+    {"tag": "gerd treatment",
+     "patterns": ["What is treatment of gerd?", "What is treatment of gerd disease?", "Tell me about gerd cure", "How it is treated?", "How doctors treat it?" ],
+     "responses": ["void certain trigger foods and beverages: chocolate, coffee, peppermint, greasy or spicy foods, tomato products, and alcoholic beverages. Stop smoking. Tobacco may result in acid reflux and is one of the biggest risk factors for esophageal cancer. Weight loss if overweight. Excess abdominal fat is one of the biggest risk factors for heartburn.You can take Uncenil syrup once a day and tablet risek 20mg twice a day follow it  for 7 days,if you have more query please visist the nearest doctor."],
+     "context": ["Knowing_about_gerd_treatment"]
+    },
+    {"tag": "gerd symptoms",
+     "patterns": ["What are symptoms of gerd disease", "Symptoms of gerd", "Tell me about its symptoms", "What symptoms does you feel when gerd?", "What do you feel when you have gerd?" ],
+     "responses": ["A burning sensation in your chest (heartburn), usually after eating, which might be worse at night.Chest pain.Difficulty swallowing.Regurgitation of food or sour liquid."],
+     "context": ["Knowing_gerd_symptoms"]
+    },
+
+    {"tag": "Indigestion description",
+        "patterns": ["Tell me about Indigestion disease", "about Indigestion", "What is indigestion?", "What is Indigestion disease?", "Indigestion disease","Indigestion" ],
+        "responses": ["Indigestion, also known as dyspepsia, is a term used to describe one or more symptoms including a feeling of fullness during a meal, uncomfortable fullness after a meal, and burning or pain in the upper abdomen. Indigestion is common in adults and can occur once in a while or as often as every day."],
+        "context": ["Knowing_about_indigestion_disease"]
+       },
+       {"tag": "Indigestion treatment",
+        "patterns": ["What is treatment of Indigestion?", "What is treatment of Indigestion disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["You might not need any treatment at all. Indigestion often goes away on its own after a few hours. But let your doctor know if your symptoms get worse.Any treatment you get will depend on what’s causing your indigestion. You can also do some things on your own to ease your symptoms:Try not to chew with your mouth open, talk while you chew, or eat too fast. This makes you swallow too much air, which can add to indigestion.Drink beverages after rather than during meals.Avoid late-night eating."],
+        "context": ["Knowing_about_indigestion_treatment"]
+       },
+       {"tag": "Indigestion symptoms",
+        "patterns": ["What are symptoms of Indigestion disease", "Symptoms of Indigestion", "Tell me about its symptoms", "What symptoms does you feel when indigestion?", "What do you feel when you have indigestion?" ],
+        "responses": ["Fullness during a meal. The person feels overly full soon after the meal starts and cannot finish the meal.Bothersome fullness after a meal. The person feels overly full after a meal—it may feel like the food is staying in the stomach too long.Epigastric pain. The epigastric area is between the lower end of the chest bone and the navel. The person may experience epigastric pain ranging from mild to severe.Epigastric burning"],
+        "context": ["Knowing_Indigestion_symptoms"]
+       },
+       {"tag": "Vomiting description",
+        "patterns": ["Tell me about vomiting disease", "about vomiting", "What is vomiting?", "What is vomiting disease?", "vomiting disease","Vomiting" ],
+        "responses": ["Vomiting is the forceful ejection of stomach contents through the mouth. This is generally a protective mechanism to remove harmful ingested substances, but can occur from many unrelated infectious and inflammatory conditions in the body."],
+        "context": ["Knowing_about__vomiting"]
+       },
+       {"tag": "Vomiting treatment",
+        "patterns": ["What is treatment of vomiting?", "What is treatment of vomiting disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Drink clear or ice-cold drinks.Eat light, bland foods (such as saltine crackers or plain bread).Avoid fried, greasy, or sweet foods.Eat slowly and eat smaller, more frequent meals.Do not mix hot and cold foods."],
+        "context": ["Knowing_about_vomiting_treatment"]
+       },
+       {"tag": "Vomiting symptoms",
+        "patterns": ["What are symptoms of Vomiting disease", "Symptoms of vomiting", "Tell me about its symptoms", "What symptoms does you feel when vomit or vomiting?", "What do you feel when you have vomiting?" ],
+        "responses": ["signs that you are about to vomit include gagging, retching, choking, involuntary stomach reflexes, the mouth filling with saliva "],
+        "context": ["Knowing_Indigestion_symptoms"]
+       },
+       {"tag": "Ulcer description",
+        "patterns": ["Tell me about ulcer disease", "about ulcer", "What is ulcer?", "What is ulcer disease?", "ulcer disease","ulcer" ],
+        "responses": ["An “ulcer” is an open sore. The word “peptic” means that the cause of the problem is due to acid. Most of the time when a gastroenterologist is referring to an “ulcer” the doctor means a peptic ulcer."],
+        "context": ["Knowing_about__ulcer"]
+       },
+       {"tag": "Ulcer treatment",
+        "patterns": ["What is treatment of ulcer?", "What is treatment of ulcer disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["all peptic ulcers will be treated with a proton pump inhibitor (PPI). PPIs are powerful acid blocking drugs that can be taken as a pill or given in an IV. Often, the potent IV form is used if a patient is hospitalized with a bleeding ulcer. There are six PPIs available in the United States. These are omeprazole (Prilosec®, Zegerid®), lansoprazole (Prevacid®), pantoprazole (Protonix®), rabeprazole (Aciphex®), esomeprazole (Nexium®), and dexlansoprazole (Dexilant®). There are very few medical differences between these drugs."],
+        "context": ["Knowing_about_ulcer_treatment"]
+       },
+       {"tag": "ulcer symptoms",
+        "patterns": ["What are symptoms of ulcer disease", "Symptoms of ulcer", "Tell me about its symptoms", "What symptoms does you feel when you have ulcer?", "What do you feel when you have ulcer?" ],
+        "responses": ["Many people with ulcers have no symptoms at all. Some people with an ulcer have belly pain. This pain is often in the upper abdomen. Sometimes food makes the pain better, and sometimes it makes it worse. Other symptoms include nausea, vomiting, or feeling bloated or full. It is important to know that there are many causes of abdominal pain, so not all pain in the abdomen is an “ulcer”.The most important symptoms that ulcers cause are related to bleeding."],
+        "context": ["Knowing_ulcer_symptoms"]
+       },
+       {"tag": "Abdominal Pain description",
+        "patterns": ["Tell me about abdominal pain disease", "about abdominal pain", "What is abdominal pain?", "What is abdominal pain disease?", "abdominal disease","abdominal pain" ],
+        "responses": ["Ordinarily, we are unaware of any of the actions of the organs in the abdomen or any discomfort from activities such as eating, movement of food through the intestines, or bowel movements. Nerves are constantly monitoring activities in the body, and when those messages are transmitted to the brain and come into consciousness as unpleasant sensations, we may sense pain or discomfort."],
+        "context": ["Knowing_about__abdominal_pain"]
+       },
+       {"tag": "Abdominal Pain treatment",
+        "patterns": ["What is treatment of abdominal pain?", "What is treatment of abdominal disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Place a hot water bottle or heated wheat bag on your abdomen.Soak in a warm bath.Drink plenty of clear fluids such as water.Reduce your intake of coffee, tea and alcohol as these can make the pain worse"],
+        "context": ["Knowing_about_abdominal_pain_treatment"]
+       },
+       {"tag": "Abdominal Pain symptoms",
+        "patterns": ["What are symptoms of abdominal pain disease", "Symptoms of abdominal pain", "Tell me about its symptoms", "What symptoms does you feel when you have abdominal pain?", "What do you feel when you have abdominal pain?" ],
+        "responses": ["Nausea, fever, or the inability to keep food down for several days.Bloody stools.Difficulty breathing.Vomiting blood.The pain occurs during pregnancy.The abdomen is tender to the touch"],
+        "context": ["Knowing_abdominal_pain_symptoms"]
+       },
+       {"tag": "Gas description",
+        "patterns": ["Tell me about gas disease", "about gas", "What is gas?", "What is gas disease?", "gas","what is gas in general" ],
+        "responses": ["Gas can contribute to a sense of bloating (fullness), belching, abdominal cramps, and flatulence (gas). These symptoms are usually brief and resolve once gas is released by belching or flatulence. Some people can be more sensitive to even normal amounts of gas and develop the above symptoms."],
+        "context": ["Knowing_about__gas"]
+       },
+       {"tag": "Gas treatment",
+        "patterns": ["What is treatment of gas?", "What is treatment of gas disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["The most common ways to reduce the discomfort of gas are changing diet, taking eno or other medicines, and reducing the amount of air swallowed."],
+        "context": ["Knowing_about_gas_treatment"]
+       },
+       {"tag": "Gas symptoms",
+        "patterns": ["What are symptoms of gas disease", "Symptoms of gas", "Tell me about its symptoms", "What symptoms does you feel when you have gas?", "What do you feel when you have gas?" ],
+        "responses": ["Belching. Belching during or after meals is normal, but people who belch frequently may be swallowing too much air and releasing it before the air enters the stomach. ...Flatulence. Passing gas through the rectum is called flatulence.Abdominal bloating.Abdominal pain and discomfort."],
+        "context": ["Knowing_about_gas_symptoms"]
+       },
+       {"tag": "Biliary Tract Disorder description",
+        "patterns": ["Tell me about biliary tract disorder disease", "about biliary tract disorder", "What is biliary tract disorder disease?", "What is biliary tract disorder?", "biliary tract disorder","what is biliary tract disorder in general" ],
+        "responses": ["Gallstones are collections of cholesterol, bile pigment or a combination of the two, which can form in the gallbladder or within the bile ducts of the liver. In the United States, the most common type of gallstones are made of cholesterol"],
+        "context": ["Knowing_about__biliary_tract_disorder"]
+       },
+       {"tag": "Biliary Tract Disorder treatment",
+        "patterns": ["What is treatment of biliary tract disorder?", "What is treatment of biliary tract disorder disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["he treatment for gallstones that obstruct the common bile duct is endoscopic retrograde cholangiopancreatography (ERCP) or surgery. ERCP involves passage of a thin flexible scope through the mouth and into the duodenum where it is used to evaluate the common bile duct or pancreatic duct. Tiny tubes and instruments may be used to further evaluate the ducts and remove stones if necessary. Gallbladder surgery may be performed if there are stones found in the gallbladder itself, as these cannot be removed by ERCP."],
+        "context": ["Knowing_about_biliary_tract_disease_treatment"]
+       },
+       {"tag": "Biliary Tract Diorder symptoms",
+        "patterns": ["What are symptoms of biliary tract disorder disease", "Symptoms of biliary tract disorder", "Tell me about its symptoms", "What symptoms does you feel when you have biliary tract disorder?", "What do you feel when you have biliary tract disorder?" ],
+        "responses": ["Gallstones that are not causing symptoms generally do not require further evaluation. Many times gallstones are found by chance on an abdominal x-ray or ultrasound done for other reasons. Unless symptoms of pain, nausea, vomiting or fever are present,"],
+        "context": ["Knowing_about_biliary_tract_disorder_symptoms"]
+       },
+
+       {"tag": "Gallstone Pancreatitis Disorder description",
+        "patterns": ["Tell me about gallstone pancreatitis disorder disease", "about gallstone pancreatitis disorder", "What is gallstone pancreatitis disorder disease?", "What is gallstone pancreatitis disorder?", "gallstone pancreatitis disorder","what is gallstone pancreatitis disorder in general" ],
+        "responses": ["Gallstone pancreatitis is an inflammation or irritation of the pancreas that is caused by a gallstone getting stuck while trying to pass out of the bile duct and into the small intestines. This can happen when a stone squeezes out of the gallbladder, or forms in the bile duct itself. Pancreas juice to back up because of this and lead to the pancreatitis."],
+        "context": ["Knowing_about__gallstone_pancreatitis_disorder"]
+       },
+       {"tag": "Gallstone Pancreatitis treatment",
+        "patterns": ["What is treatment of gallstone pancreatitis disorder?", "What is treatment of gallstone pancreatitis disorder disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Pancreas labs (amylase and lipase) can be increased, and your liver tests (ALT, AST, alkaline phosphatase and bilirubin) can be elevated as well. Your doctor can sometimes see the pancreas irritation on a CAT scan of your belly. This can tell them how bad the pancreatitis is. They may also want to get other special tests to look for small gallstones."],
+        "context": ["Knowing_about_gallstone_pancreatitis_disease_treatment"]
+       },
+       {"tag": "Gallstone Pancreatitis symptoms",
+        "patterns": ["What are symptoms of gallstone pancreatitis disorder disease", "Symptoms of gallstone pancreatitis disorder", "Tell me about its symptoms", "What symptoms does you feel when you have gallstone pancreatitis disorder tract disorder?", "What do you feel when you have gallstone pancreatitis disorder?" ],
+        "responses": ["The pain may be in the left upper belly on in the back. It usually comes on quickly and can be sharp or squeezing. You can sometimes also be sick to the stomach and throw up."],
+        "context": ["Knowing_about_gallstone_pancreatitis_disorder_symptoms"]
+
+       },
+       {"tag": "Constipation description",
+        "patterns": ["Tell me about constipation disease", "about constipation", "What is constipation disease?", "What is constipation  disease?", "constipation","what is constipation in general" ],
+        "responses": ["Constipation is one of the most frequent gastrointestinal complaints."],
+        "context": ["Knowing_about__constipation"]
+       },
+       {"tag": "Constipation treatment",
+        "patterns": ["What is treatment of constipation?", "What is treatment of constipation disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["When stool is impacted, tap water enemas are commonly used. Usually people are positioned on their left side, with knees flexed. About 5 to 10 ounces of water, at body temperature, are gently instilled into the rectum and sigmoid colon. When the water is emptied, the impacted stool is passed with it. Non-prescription prepackaged enemas can be used in place of tap water. If enemas fail to work, a health care practitioner may need to remove the stool manually using a gloved finger. The person is then sometimes asked to drink a solution containing dissolved salts and polyethylene glycol, which cleanses the digestive tract.After the impaction has been removed, the person may be told to add fiber to the diet or to use laxatives to prevent constipation. Laxatives may be used every two to three days if a bowel movement does not occur naturally."],
+        "context": ["Knowing_about_constipation_treatment"]
+       },
+       {"tag": "Constipation symptoms",
+        "patterns": ["What are symptoms of constipation disease", "Symptoms of constipation", "Tell me about its symptoms", "What symptoms does you feel when you have constipation?", "What do you feel when you have constipation?" ],
+        "responses": ["Difficult and painful bowel movements.Bowel movements fewer than three times a week.Feeling bloated or uncomfortable.Feeling sluggish.Abdominal pain."],
+        "context": ["Knowing_about_constipation_symptoms"]
+
+       },
+       {"tag": "Diarreha description",
+        "patterns": ["Tell me about diarreha disease", "about diarreha", "What is diarreha disease?", "What is dairreha  disease?", "diarreha","what is diarreha in general" ],
+        "responses": ["it is a leading cause of mortality in children younger than four years old, especially in the developing world. Diarrhea that lasts less than 2 weeks is termed acute diarrhea. Persistent diarrhea lasts between 2 and 4 weeks. Chronic diarrhea lasts longer than 4 weeks."],
+        "context": ["Knowing_about__diarreha"]
+       },
+       {"tag": "Diarreha treatment",
+        "patterns": ["What is treatment of diarreha?", "What is treatment of dairreha disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["It is important to take plenty of fluid with sugar and salt to avoid dehydration. Salt and sugar together in a beverage help your intestine absorb fluids. Milk and dairy products should be avoided for 24 to 48 hours as they can make diarrhea worse. Initial dietary choices when refeeding should begin with soups and broth.Anti-diarrheal drug therapy can be helpful to control severe symptoms, and includes bismuth subsalicylate and antimotility agents such as loperamide. These, however, should be avoided in people with high fever or bloody diarrhea as they can worsen severe colon infections and in children because the use of anti-diarrheals can lead to complications of hemolytic uremic syndrome in cases of Shiga-toxin E. coli (E. coli 0157:H7).Your doctor may prescribe antibiotics if you have high fever, dysentery, or moderate to severe traveler's diarrhea. Some infections such as Shigella always require antibiotic therapy."],
+        "context": ["Knowing_about_diarreha_treatment"]
+       },
+       {"tag": "Diarreha symptoms",
+        "patterns": ["What are symptoms of dairreha disease", "Symptoms of dairreha", "Tell me about its symptoms", "What symptoms does you feel when you have dairreha?", "What do you feel when you have dairreha?" ],
+        "responses": ["Diarrheal stools are those that take shape of the container, so they are often described as loose or watery. Some people consider diarrhea as an increase in the number of stools, but stool consistency is really the hallmark. Associated symptoms can include abdominal cramps fever, nausea, vomiting, fatigue and urgency. Chronic diarrhea can be accompanied by weight loss, malnutrition, abdominal pain or other symptoms of the underling illness"],
+        "context": ["Knowing_about_diareha_symptoms"]
+
+       },
+       {"tag": "Chronic Diarreha description",
+        "patterns": ["Tell me about chronic diarreha disease", "about chronic diarreha", "What is chronic diarreha disease?", "What is chronic dairreha  disease?", " chronic diarreha","what is chronic diarreha in general" ],
+        "responses": ["Chronic diarrhea can be accompanied by weight loss, malnutrition, abdominal pain or other symptoms of the underling illness. Clues for organic disease are weight loss, diarrhea that wakes you up at night, or blood in the stools. "],
+        "context": ["Knowing_about__Chronic_Diarreha"]
+       },
+       {"tag": "Chronic Diarreha treatment",
+        "patterns": ["What is treatment of chronic diarreha?", "What is treatment of chronic dairreha disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Anti-diarrheal medicine: Medicines to slow movement in your intestines or make your bowel movements less watery.Antibiotics: If your chronic diarrhea is due to a bacterial infection, you will need antibiotics to get rid of it."],
+        "context": ["Knowing_about_chronic_diarreha_treatment"]
+       },
+       {"tag": "Chronic Diarreha symptoms",
+        "patterns": ["What are symptoms of chronic dairreha disease", "Symptoms of chronic dairreha", "Tell me about its symptoms", "What symptoms does you feel when you have chronic dairreha?", "What do you feel when you have chronic dairreha?" ],
+        "responses": ["symptoms can include abdominal cramps fever, nausea, vomiting, fatigue and urgency. Chronic diarrhea can be accompanied by weight loss, malnutrition, abdominal pain "],
+        "context": ["Knowing_about_Chronic_Diarreha_symptoms"]
+
+       },
+       {"tag": "Irritable Bowel Syndrome description",
+        "patterns": ["Tell me about chronic irritable bowel syndrome disease", "about irritable bowel syndrome", "What is irritable bowel syndrome disease?", "What is irritable bowel syndrome disease?", " irritable bowel syndrome","what is irritable bowel syndrome in general" ],
+        "responses": ["Irritable bowel syndrome (IBS) is a group of symptoms that occur together, including repeated pain in your abdomen and changes in your bowel movements, which may be diarrhea, constipation, or both."],
+        "context": ["Knowing_about__Irritable_Bowel_Diarreha"]
+       },
+       {"tag": "Irritable Bowel Syndrome treatment",
+        "patterns": ["What is treatment of irritable bowel syndrome?", "What is treatment of irritable bowel syndrome disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["use one the following medicine  twice a day after meal Alosetron (Lotroneor visit doctor if you are heat patient or have acid reflux"],
+        "context": ["Knowing_about_Irritable_Bowel_Syndrome_treatment"]
+       },
+       {"tag": "Irritable Bowel Syndrome symptoms",
+        "patterns": ["What are symptoms of irritable bowel disease", "Symptoms of irritable bowel syndrome", "Tell me about its symptoms", "What symptoms does you feel when you have irritable bowel syndrome?", "What do you feel when you have irritable bowel syndrome?" ],
+        "responses": ["Signs and symptoms include cramping, abdominal pain, bloating, gas, and diarrhea or constipation, or both."],
+        "context": ["Knowing_about_Irritable_Bowel_Syndrome_symptoms"]
+
+       },
+       {"tag": "Anal Fissures description",
+        "patterns": ["Tell me about anal fissures disease", "about anal fissures", "What is anal fissures disease?", "What is anal fissures disease?", " anal fissures","what is anal fissures in general" ],
+        "responses": ["Anal fissures are also a structural disease. They are splits or cracks in the lining of your anal opening. The most common cause of an anal fissure is the passage of very hard or watery stools. The crack in the anal lining exposes the underlying muscles that control the passage of stool through the anus and out of the body"],
+        "context": ["Knowing_about__anal_fissures"]
+       },
+       {"tag": "Anal Fissures treatment",
+        "patterns": ["What is treatment of anal fissures?", "What is treatment of anal fissures disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Anal fissures often heal within a few weeks if you take steps to keep your stool soft, such as increasing your intake of fiber and fluids. Soaking in warm water for 10 to 20 minutes several times a day, especially after bowel movements, can help relax the sphincter and promote healing.use medicine syrup LILAC twice a day if the pai continues urgenlty visit the doctor"],
+        "context": ["Knowing_about_Anal_Fissures"]
+       },
+       {"tag": "Anal Fissures symptoms",
+        "patterns": ["What are symptoms of anal fissures disease", "Symptoms of anal fissures", "Tell me about its symptoms", "What symptoms does you feel when you have anal fissures?", "What do you feel when you have anal fissures?" ],
+        "responses": ["Pain, sometimes severe, during bowel movements.Pain after bowel movements that can last up to several hours.Bright red blood on the stool or toilet paper after a bowel movement.A visible crack in the skin around the anus."],
+        "context": ["Knowing_about_Anal_Fissures_symptoms"]
+
+       },
+       {"tag": "Lactose Intolerance description",
+        "patterns": ["Tell me about lactose intolerance disease", "about lactose intolerance", "What is lactose intolerance disease?", "What is lactose intolerance disease?", " lactose intolerance","what is lactose intolerance in general" ],
+        "responses": ["Lactose intolerance is a disorder in which a person is unable to fully digest lactose, a simple carbohydrate present in all mammals milk and in its derivatives. "],
+        "context": ["Knowing_about__Lactose_intolerance"]
+       },
+       {"tag": "Lactose Intolerance treatment",
+        "patterns": ["What is treatment of lactose intolerance?", "What is treatment of lactose intolerance disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Treatments for lactose intolerance include enzyme supplements to help break down lactose, and replacing regular milk with lactose-free or dairy-free milk. It's important to also identify the differences between lactose intolerance, milk allergy and dairy sensitivity as part of your diagnosis and treatment."],
+        "context": ["Knowing_about_Lactose_Intolerance"]
+       },
+       {"tag": "Lactose Intolerance symptoms",
+        "patterns": ["What are symptoms of lactose intolerance disease", "Symptoms of lactose intolerance", "Tell me about its symptoms", "What symptoms does you feel when you have lactose intolerance?", "What do you feel when you have lactose intolerance?" ],
+        "responses": ["Symptoms of lactose intolerance include diarrhea, gas, abdominal cramps and bloating. Symptoms vary between individuals due to various levels of decrease of intestinal lactase, and typically depend on the amount of lactose ingested."],
+        "context": ["Knowing_about_Lactose_Intolerance_symptoms"]
+
+       },
+       {"tag": "Gallstone description",
+        "patterns": ["Tell me about gallstone disease", "about lactose intolerance", "What is gallstone disease?", "What is gallstone disease?", " gallstone","what is gallstone in general" ],
+        "responses": ["stone-like lumps that develop in the bile ducts or gallbladder. They can be as small as a grain of sand or as large as a golf ball. The gallbladder is a small digestive organ located in the right upper abdomen. Its job is to produce, store and release bile, a yellowish-green fluid that aids in the digestion of fat."],
+        "context": ["Knowing_about__Gallstone"]
+       },
+       {"tag": "Gallstone treatment",
+        "patterns": ["What is treatment of gallstone?", "What is treatment of gallstone disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["Depending on symptoms, surgery may be recommended to get rid of the gallstones. Without the gallbladder, bile is not stored anymore in the gallbladder and thus it flows straight from the liver into the small intestine. This wont affect a normal digestive function, however. Endoscopy is usually chosen if the gallstones are lodged in the bile ducts."],
+        "context": ["Knowing_about_Gallstone"]
+       },
+       {"tag": "Gallstone symptoms",
+        "patterns": ["What are symptoms of gallstone disease", "Symptoms of gallstone", "Tell me about its symptoms", "What symptoms does you feel when you have gallstone?", "What do you feel when you have gallstone?" ],
+        "responses": ["Gallstones may show no symptoms, although most people experience pain in the upper right abdomen, especially when they consume fatty foods. Other symptoms of gallstones include indigestion, diarrhea, burping, dark urine, vomiting, nausea, and clay-colored stool. People with mild or no symptoms may not need treatment."],
+        "context": ["Knowing_about_Gallstone"]
+
+       },
+       {"tag": "Liver Disease description",
+        "patterns": ["Tell me about liver disease", "about liver disease", "What is liver disease?", "What is liver disease?", " liver disease","what is liver disease in general" ],
+        "responses": ["The liver is the second largest organ and plays a varied role in digestion, including breaking down of food, storing energy, and getting rid of waste and toxins from the bloodstream. Liver disease is a collective term for all digestive conditions that affect the liver"],
+        "context": ["Knowing_about__Liver_Disease"]
+       },
+       {"tag": "Liver Disease treatment",
+        "patterns": ["What is treatment of liver disease?", "What is treatment of liver disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["To accurately diagnose and find the cause of liver disease, your provider will also recommend one or more tests. These may include:Blood tests: Liver enzymes measure levels of liver enzymes in your blood. Other tests of liver function include a blood-clotting test called the international normalized ratio INR. Abnormal levels may indicate problems with your liver function.Imaging tests: Your provider can use ultrasound, MRI or CT scan to look for signs of damage, scarring or tumors in your liver. Another specialized type of ultrasound called fibroscan can be used to determine the degree of scarring and fat deposition in the liver.Liver biopsy: During a liver biopsy, your provider uses a thin needle to remove a small sample of liver tissue. They analyze the tissue to look for signs of liver disease."],
+        "context": ["Knowing_about_Liver_Disease"]
+       },
+       {"tag": "Liver Disease symptoms",
+        "patterns": ["What are symptoms of liver disease", "Symptoms of liver", "Tell me about its symptoms", "What symptoms does you feel when you have liver disease?", "What do you feel when you have liver disease?" ],
+        "responses": ["Symptoms of liver disease can vary from one person to another, depending on the cause.  Some general symptoms may include: itchy skin, persistent fatigue, vomiting, nausea, swollen abdomen, legs or ankles, dark urine, jaundice, loss of appetite, and black or bloody stool."],
+        "context": ["Knowing_about_Liver_Disease"]
+
+       },
+       {"tag": "Loss Of Apetite description",
+        "patterns": ["Tell me about loss of apetite disease", "about loss of apetite disease", "What is loss of apetite disease?", "What is loss of apetite disease?", " loss of apetite","what is loss of apetite in general" ],
+        "responses": ["Loss of appetite means you don't have the same desire to eat as you used to"],
+        "context": ["Knowing_about__Loss_Of_Apetite"]
+       },
+       {"tag": "Loss Of Apetite treatment",
+        "patterns": ["What is treatment of loss of apetite?", "What is treatment of loss of disease?", "Tell me about its treatment", "How it is treated?", "How doctors treat it?" ],
+        "responses": ["low-dose corticosteroids to increase appetite. sleeping pills to help you sleep better at night.physical therapy to slowly increase exercise.antidepressants or antianxiety medications, for depression or anxiety.you can take one of these medicine once a day"],
+        "context": ["Knowing_about_Loss_Of_Apetite"]
+       },
+       {"tag": "Loss Of Apetite symptoms",
+        "patterns": ["What are symptoms of loss of apetite disease", "Symptoms of loss of apetite", "Tell me about its symptoms", "What symptoms does you feel when you have loss of apetite disease?", "What do you feel when you have loss of apetite disease?" ],
+        "responses": ["Signs of decreased appetite include not wanting to eat, unintentional weight loss, and not feeling hungry. The idea of eating food may make you feel nauseous, as if you might vomit after eating."],
+        "context": ["Knowing_about_Loss_Of_Apetite"]
+
+       }
+
+]
+}

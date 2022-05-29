@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en" class="">
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style1.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.min.css')}}">
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <script
+  src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+  data-auto-a11y="true"
+></script>
+<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-130795909-1');
+  </script>
+
+</head>
+<body>
+
+  <div class="loader_bg">
+    <div class="loader"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+<style>
+  body{
+    overflow: hidden;
+  }
+  .loader_bg{top: 0px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999999;
+    background: #dff7f6;
+    width: 83%;
+    height: 100%;
+    left: 287px;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 3s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+
+*
+
+  
+</style>
+
+  <style>
+    .aside{
+     
+      width: 257px !important;
+    }
+    .menu-label{
+      padding-left: 40px !important;
+    }
+    body{
+
+      font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    .menu-list{ font-size: 15px;
+      padding-left: 23px !important;
+
+
+
+      
+    }
+  
+  
+  
+  
+  
+  </style>
+
+<div   id="app">
+  <nav style="    width: 6vw;"  id="navbar-main" class="navbar is-fixed-top">
+    <div  class="navbar-brand">
+      <a class="navbar-item mobile-aside-button">
+        <span style="    left: 10px;
+        
+        position: relative;" class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+      </a>
+      
+    </div>
+   
+  
+
+
+  
+
+<aside class="aside is-placed-left is-expanded">
+  <div class="aside-tools">
+   
+    <div  style="        border-radius: 10px;
+    padding-top: 18px;
+    float: left;
+    width: 58px;
+    height: 58px;
+    padding-left: 17px;
+    background-color: #f2f4fd;
+    left: 10px;
+ 
+    position: relative;
+"> <b style="font-size: 30px;" class="font-black">H</b></div><div style="       left:5px;
+  
+    float: right;
+    position: relative;">&nbsp;&nbsp; Health And Care</div>
+    
+  </div><div style="    max-height: 63vh;
+  
+">
+  <div  class="menu is-menu-main">
+
+    <ul class="menu-list">
+      <li class="active">
+        <a href="{{url_for('home')}}">
+          <span  style="    color: #001c6d !important;" class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">Dashboard</span> </a>
+        </li>
+          <li class="--set-active-tables-html">
+            <a href="/news">
+              <span  style="    color: #001c6d !important;" class="icon"><i class="mdi mdi-earth"></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">World Health News</span> </a>
+        </li><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><li class="--set-active-tables-html">
+            <a href="/logout">
+              <span  style="    color: #001c6d !important;" class="icon"><i class='fas fa-sign-out-alt'></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">Logout</span> </a>
+        </li>
+       
+    
+      
+     
+    </ul>
+    <svg class="jss357" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 1921" preserveAspectRatio="none"><path class="jss358" d="M-58.2987738,910.903394 C-213.665983,944.019728 -280.940056,954.15079 -436.833756,920.508102 C-591.293459,887.174877 -747.302467,887.174877 -884.636237,887.174877 L-884.636237,1035.36376 L1035.36376,1035.36376 L1035.36376,887.174877 C854.898993,868.678365 795.227803,958.52455 505.146363,922.849714 C215.064933,887.174877 97.0684352,877.78706 -58.2987738,910.903394 Z" transform="translate(75.363763, 960.000000) rotate(90.000000) translate(-75.363763, -960.000000)" fill="currentColor"></path></svg>
+
+   
+  </div></div>
+</aside>
+
+
+
+<style>
+
+
+
+.jss357 {
+    top: 0;
+    color: white;
+    right: -32px;
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+</style>
+   
+  </div></div>
+</aside>
+
+
+
+
+
+
+
+
+</nav></div>
+
+<section style="
+
+
+
+
+" class="is-title-bar">
+
+ <div id = "container">
+            
+
+            <div id = "results">
+                <form name = "quizForm" action="/abdominal" method="POST">
+                     <h3>Do you feel pain or sometimes severe, during bowel movements?</h3>
+                    <input type="radio" name="q1" value="a" id="q1a">Yes</input>
+                    
+                   
+
+                  <h3>Do you experience Pain after bowel movements that can last up to several hours?</h3>
+                    <input type="radio" name="q2" value="a" id="q2a">Yes</input>
+                   
+                   
+                  <h3>Do you feel right red blood on the stool or toilet paper after a bowel movement?</h3>
+                    <input type="radio" name="q3" value="a" id="q3a">Yes</input>
+                   
+         
+
+                 
+                   
+                  <h3>Do you experience visible crack in the skin around the anus?</h3>
+                    <input type="radio" name="q5" value="a" id="q5a">Yes</input>
+                   
+                   
+<input class="btn btn-2 btn-2g" type="submit" name="Submit" >
+                </form>
+            </div>
+        </div>
+ 
+
+
+    </section>
+    
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+<script>
+  "use strict";Array.from(document.getElementsByClassName("dropdown")).forEach(function(e){e.addEventListener("click",function(e){var t;e.currentTarget.classList.contains("navbar-item")?e.currentTarget.classList.toggle("active"):(t=e.currentTarget.getElementsByClassName("mdi")[1],e.currentTarget.parentNode.classList.toggle("active"),t.classList.toggle("mdi-plus"),t.classList.toggle("mdi-minus"))})}),Array.from(document.getElementsByClassName("mobile-aside-button")).forEach(function(e){e.addEventListener("click",function(e){e=e.currentTarget.getElementsByClassName("icon")[0].getElementsByClassName("mdi")[0];document.documentElement.classList.toggle("aside-mobile-expanded"),e.classList.toggle("mdi-forwardburger"),e.classList.toggle("mdi-backburger")})}),Array.from(document.getElementsByClassName("--jb-navbar-menu-toggle")).forEach(function(e){e.addEventListener("click",function(e){var t=e.currentTarget.getElementsByClassName("icon")[0].getElementsByClassName("mdi")[0];document.getElementById(e.currentTarget.getAttribute("data-target")).classList.toggle("active"),t.classList.toggle("mdi-dots-vertical"),t.classList.toggle("mdi-close")})}),Array.from(document.getElementsByClassName("--jb-modal")).forEach(function(e){e.addEventListener("click",function(e){e=e.currentTarget.getAttribute("data-target");document.getElementById(e).classList.add("active"),document.documentElement.classList.add("clipped")})}),Array.from(document.getElementsByClassName("--jb-modal-close")).forEach(function(e){e.addEventListener("click",function(e){e.currentTarget.closest(".modal").classList.remove("active"),document.documentElement.classList.remove("is-clipped")})}),Array.from(document.getElementsByClassName("--jb-notification-dismiss")).forEach(function(e){e.addEventListener("click",function(e){e.currentTarget.closest(".notification").classList.add("hidden")})});</script>
+
+<ul class="bg-bubbles">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<script>
+  src="http://www.datouwang.com/uploads/demo/jiaoben/201507/jiaoben544/js/jquery-2.1.1.min.js" 
+</script>
+
+
+<style>
+  .btn {
+        left: 28%;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 13px 34px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+  .btn-2 {
+  background: #415ba7;
+  color: #fff;
+  box-shadow: 0 6px #001c6d;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+  .btn-2g:hover {
+  box-shadow: 0 4px #ab3c3c;
+  top: 2px;
+}
+
+.btn-2g:active {
+  box-shadow: 0 0 #ab3c3c;
+  top: 6px;
+}
+  .css-18a571y{
+        z-index: 10000;
+    cursor: pointer;
+
+  }
+  #container{
+       background: white;
+    width: 45%;
+    z-index: 10;
+    position: relative;
+    left: 255px;
+    border-radius: 11px
+  }
+  h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .btn-default{
+    padding-top: 10px;
+    position: relative;
+    left: 30%;
+  }
+  form{
+    position: relative;
+    padding-left: 10px;
+  }
+
+
+
+
+  @import url(http://fonts.useso.com/css?family=Source+Sans+Pro:200,300);
+  
+  .bg-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .bg-bubbles li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color:rgb(83 205 169 / 15%);
+    bottom: -160px;
+    -webkit-animation: square 25s infinite;
+    animation: square 25s infinite;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+  .bg-bubbles li:nth-child(1) {
+    left: 10%;
+  }
+  .bg-bubbles li:nth-child(2) {
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 17s;
+            animation-duration: 17s;
+  }
+  .bg-bubbles li:nth-child(3) {
+    left: 25%;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  .bg-bubbles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation-duration: 22s;
+            animation-duration: 22s;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  .bg-bubbles li:nth-child(5) {
+    left: 70%;
+  }
+  .bg-bubbles li:nth-child(6) {
+    left: 80%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bg-bubbles li:nth-child(7) {
+    left: 32%;
+    width: 160px;
+    height: 160px;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .bg-bubbles li:nth-child(8) {
+    left: 55%;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+    -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+  }
+  .bg-bubbles li:nth-child(9) {
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .bg-bubbles li:nth-child(10) {
+    left: 90%;
+    width: 160px;
+    height: 160px;
+    -webkit-animation-delay: 11s;
+            animation-delay: 11s;
+  }
+  @-webkit-keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-700px) rotate(600deg);
+              transform: translateY(-700px) rotate(600deg);
+    }
+  }
+  @keyframes square {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-700px) rotate(600deg);
+              transform: translateY(-700px) rotate(600deg);
+    }
+  }</style>
+
+</body>
+
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <script
+  src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+  data-auto-a11y="true"
+></script>
+<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-130795909-1');
+  </script>
+
+</head>
+<body>
+
+  <div class="loader_bg">
+    <div class="loader"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+<style>
+   
+  .loader_bg{top: 0px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999999;
+    background: #dff7f6;
+    width: 83%;
+    height: 100%;
+    left: 287px;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 3s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+
+*
+
+  
+</style>
+
+  <style>
+    .aside{
+     
+      width: 257px !important;
+    }
+    .menu-label{
+      padding-left: 40px !important;
+    }
+    body{
+
+      font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    .menu-list{ font-size: 15px;
+      padding-left: 23px !important;
+
+
+
+      
+    }
+  
+  
+  
+  
+  
+  </style>
+
+<div   id="app">
+  <nav style="    width: 6vw;"  id="navbar-main" class="navbar is-fixed-top">
+    <div  class="navbar-brand">
+      <a class="navbar-item mobile-aside-button">
+        <span style="    left: 10px;
+        
+        position: relative;" class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+      </a>
+      
+    </div>
+   
+  
+
+
+  
+
+<aside class="aside is-placed-left is-expanded">
+  <div class="aside-tools">
+   
+    <div  style="        border-radius: 10px;
+    padding-top: 18px;
+    float: left;
+    width: 58px;
+    height: 58px;
+    padding-left: 17px;
+    background-color: #f2f4fd;
+    left: 10px;
+ 
+    position: relative;
+"> <b style="font-size: 30px;" class="font-black">H</b></div><div style="       left:5px;
+  
+    float: right;
+    position: relative;">&nbsp;&nbsp; Health And Care</div>
+    
+  </div><div style="    max-height: 63vh;
+  
+">
+  <div  class="menu is-menu-main">
+
+    <ul class="menu-list">
+      <li class="active">
+        <a href="{{url_for('home')}}">
+          <span  style="    color: #001c6d !important;" class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">Dashboard</span> </a>
+        </li>
+          <li class="--set-active-tables-html">
+            <a href="/news">
+              <span  style="    color: #001c6d !important;" class="icon"><i class="mdi mdi-earth"></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">World Health News</span> </a>
+        </li><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><li class="--set-active-tables-html">
+            <a href="/logout">
+              <span  style="    color: #001c6d !important;" class="icon"><i class='fas fa-sign-out-alt'></i></span>
+          <span style="    color: #001c6d !important;" class="menu-item-label">Logout</span> </a>
+        </li>
+       
+    
+      
+     
+    </ul>
+    <svg class="jss357" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 1921" preserveAspectRatio="none"><path class="jss358" d="M-58.2987738,910.903394 C-213.665983,944.019728 -280.940056,954.15079 -436.833756,920.508102 C-591.293459,887.174877 -747.302467,887.174877 -884.636237,887.174877 L-884.636237,1035.36376 L1035.36376,1035.36376 L1035.36376,887.174877 C854.898993,868.678365 795.227803,958.52455 505.146363,922.849714 C215.064933,887.174877 97.0684352,877.78706 -58.2987738,910.903394 Z" transform="translate(75.363763, 960.000000) rotate(90.000000) translate(-75.363763, -960.000000)" fill="currentColor"></path></svg>
+
+   
+  </div></div>
+</aside>
+
+
+
+<style>
+
+
+
+.jss357 {
+    top: 0;
+    color: white;
+    right: -32px;
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+</style>
+   
+  </div></div>
+</aside>
+
+
+
+
+
+
+
+
+</nav></div>
+
+
+
+
+ <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tb-contact">
+                           <!-- <p><i class="fas fa-envelope"></i>amnsiavi@gmail.com</p>-->
+                           
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar Start -->
+        
+        <!-- Brand Start -->
+        <div class="brand">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="b-logo">
+                            <a href="#">
+                                <img style="position: relative;
+    left: 40%;
+    padding-bottom: 30px;" src="{{url_for('static',filename='img/logo.png')}}" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Brand End -->
+
+        <!-- Nav Bar Start -->
+       
+        
+        <!-- Breadcrumb Start -->
+       
+        <!-- Breadcrumb End -->
+        
+        <!-- Single News Start-->
+        <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 style="    font-size: 18px;
+    font-weight: 600;
+    text-align: center;" class="sn-title">{{artic[0]['abstract']}} </h1>
+                             <!--   <img src="{{im[0]}}">
+                                <p>
+                                    The Leading News Papers health is conducting survey to check people awareness about health if you are intrested in helping us check out the link below: 
+                                </p>
+                                <p>
+                                    <a href="{{artic[0]['web_url']}}">{{artic[0]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[0]['source']}}
+                                </p>-->
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+<hr>
+
+        <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[1]['abstract']}} </h1>
+                                <img class="img"  src="{{im[1]}}">
+                                <p>
+                                    If you are intrested in reading this news more checkout the link below: 
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[1]['web_url']}}">{{artic[1]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[1]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<hr>
+
+      <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[2]['abstract']}} </h1>
+                                <img class="img" src="{{im[2]}}">
+                                <p>
+                                    If you are intrested in reading this news more checkout the link below: 
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[2]['web_url']}}">{{artic[2]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[2]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+  
+
+<hr>
+
+      <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[3]['abstract']}} </h1>
+                                <img class="img" src="{{im[3]}}">
+                                <p>
+                                    If you are intrested in reading this news more checkout the link below: 
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[3]['web_url']}}">{{artic[3]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[3]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+  
+
+
+
+<hr>
+
+
+      <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[5]['abstract']}} </h1>
+                                <img class="img" src="{{im[4]}}">
+                                <p>
+                                    If you are intrested in reading this news more checkout the link below: 
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[5]['web_url']}}">{{artic[5]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[5]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+  
+
+
+<hr>
+
+
+
+      <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[6]['abstract']}} </h1>
+                                <img class="img" src="{{im[5]}}">
+                                <p>
+                                    If you are intrested in reading this news more checkout the link below:  
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[6]['web_url']}}">{{artic[6]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[6]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<hr>
+
+      <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[7]['abstract']}} </h1>
+                                <img class="img" src="{{im[6]}}">
+                                <p>
+                                    If you are intrested in reading this news more checkout the link below: 
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[7]['web_url']}}">{{artic[7]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[7]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<hr>
+
+      <div class="single-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="sn-container">
+                            <div class="sn-img">
+                                
+                            </div>
+                            <div class="sn-content">
+                                <h1 class="sn-title">{{artic[8]['abstract']}} </h1>
+                                <img class="img" src="{{im[7]}}">
+                                <p>
+                                     If you are intrested in reading this news more checkout the link below: 
+                                </p>
+                                <p>
+                                    <a style="font-weight: 600" href="{{artic[8]['web_url']}}">{{artic[8]['web_url']}}</a>
+                                </p>
+                                <h3>Source</h3>
+                                <p>
+                                    {{artic[8]['source']}}
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+
+                    
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+ 
+<hr>
+ 
+        
+        <!-- Footer Start -->
+        <!--<div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Get in Touch</h3>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>World Health News</p>
+                                
+                                <div class="social">
+    
+                                    <a href="www.facebook.com/haiderabbasbalti"><i class="fab fa-facebook-f"></i></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    
+        </div>
+         <!-- Footer Bottom Start -->
+         <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <!--<p>Copyright &copy; <a href="">ML Based Gastroenterology Virtual Doctor</a>. All Rights Reserved</p>-->
+                    </div>
+        
+        <!-- Footer Bottom End -->
+
+        <!-- Back to Top -->
+        <a style="    float: right;
+    font-size: 30px;
+    top: -30px;
+    position: relative;" href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+
+
+ 
+
+
+    </section>
+    
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '658339141622648');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=658339141622648&ev=PageView&noscript=1"/></noscript>
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+
+
+
+<script>
+  src="http://www.datouwang.com/uploads/demo/jiaoben/201507/jiaoben544/js/jquery-2.1.1.min.js" 
+</script>
+<style>@import url(http://fonts.useso.com/css?family=Source+Sans+Pro:200,300);
+
+</style>
+<style type="text/css">
+    h1{ padding-top: 20px;
+    text-align: center;
+    font-weight: 600;
+
+    }
+    .img{padding-top: 20px;
+    left: 23%;
+    position: relative;
+
+    }
+    p{
+        text-align: center;
+        padding-bottom: 30px
+    }
+    
+    
+
+    h3{
+        font-weight: 600;
+        text-align: center;
+    }
+</style>
+
+  
+  
+
+</body>
+
+</html>
